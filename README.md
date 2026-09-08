@@ -22,3 +22,7 @@ Expected output:
 ```text
 bin/CROLLER.8xp
 ```
+
+## Download
+
+You can download the pre-built version of the game [here](https://github.com/lasokar/CE-Roller/raw/refs/heads/main/bin/CROLLER.8xp). It has the same set of 49 levels as the JS version. I will not be providing instructions on how to Jailbreak a calculator in order to run this, there are plenty of tutorials out there.
