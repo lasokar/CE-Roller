@@ -1,0 +1,948 @@
+
+Merging object attributes
+
+
+Discarded input sections
+
+ .comment       0x00000000      0x1be obj/CROLLER.o
+ .note.GNU-stack
+                0x00000000        0x0 obj/CROLLER.o
+ .init.weak_crt
+                0x00000000       0x10 obj/CROLLER.o
+ .text          0x00000000        0x0 obj/crt0.o
+ .data          0x00000000        0x0 obj/crt0.o
+ .bss           0x00000000        0x0 obj/crt0.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+prgm             0x00d1a87f         0x00400000
+bss              0x00d052c6         0x0000ed12
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00d1a87f                        LOAD_ADDR = 0xd1a87f
+                0x00d052c6                        BSSHEAP_LOW = 0xd052c6
+                0x00d13fd8                        BSSHEAP_HIGH = 0xd13fd8
+                0x00d1a87e                        STACK_HIGH = 0xd1a87e
+                0x00000001                        __TICE__ = 0x1
+                0x00d1a87f                        . = LOAD_ADDR
+
+.header         0x00d1a87f      0x11a
+ *(.header)
+ .header        0x00d1a87f        0x3 obj/crt0.o
+ *(.header.icon)
+ .header.icon   0x00d1a882      0x117 obj/CROLLER.o
+                0x00d1a887                ___icon
+                0x00d1a989                ___description
+
+.init           0x00d1a999      0x182
+ *(.init)
+ .init          0x00d1a999      0x182 obj/crt0.o
+                0x00d1a999                __start
+                0x00d1a9f6                __libload_library_FILEIOC
+                0x00d1aa00                _ti_Open
+                0x00d1aa04                _ti_Close
+                0x00d1aa08                _ti_Write
+                0x00d1aa0c                _ti_Read
+                0x00d1aa10                __libload_library_GRAPHX
+                0x00d1aa19                _gfx_Begin
+                0x00d1aa1d                _gfx_End
+                0x00d1aa21                _gfx_SetColor
+                0x00d1aa25                _gfx_SetPalette
+                0x00d1aa29                _gfx_FillScreen
+                0x00d1aa2d                _gfx_SetPixel
+                0x00d1aa31                _gfx_SetDraw
+                0x00d1aa35                _gfx_SwapDraw
+                0x00d1aa39                _gfx_BlitRectangle
+                0x00d1aa3d                _gfx_PrintUInt
+                0x00d1aa41                _gfx_PrintStringXY
+                0x00d1aa45                _gfx_SetTextBGColor
+                0x00d1aa49                _gfx_SetTextFGColor
+                0x00d1aa4d                _gfx_SetTextTransparentColor
+                0x00d1aa51                _gfx_GetStringWidth
+                0x00d1aa55                _gfx_Line
+                0x00d1aa59                _gfx_HorizLine
+                0x00d1aa5d                _gfx_FillCircle
+                0x00d1aa61                _gfx_Rectangle
+                0x00d1aa65                _gfx_FillRectangle
+                0x00d1aa69                _gfx_TransparentSprite
+                0x00d1aa6d                _gfx_FillTriangle
+                0x00d1aa71                _gfx_SetTextScale
+                0x00d1aa75                _gfx_SetTransparentColor
+                0x00d1aa79                __libload_library_KEYPADC
+                0x00d1aa83                _kb_Scan
+                0x00d1aa87                _kb_AnyKey
+                0x00d1aa8b                _kb_Reset
+                0x00d1aadf                ___exithl
+                0x00d1aae0                _exit.sp
+
+.text           0x00d1ab1b     0x768c
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00d1ab1b      0x623 obj/CROLLER.o
+                0x00d1ab1b                __land
+                0x00d1ab1f                __iand
+                0x00d1ab36                __bdivu
+                0x00d1ab40                __bdvrmu
+                0x00d1ab41                __bdvrmu.hijack_l_dividend
+                0x00d1ab4f                __bremu
+                0x00d1ab5a                __bshl
+                0x00d1ab63                __dcmp
+                0x00d1abc1                __frameset
+                0x00d1abcf                __frameset0
+                0x00d1abda                __ftod
+                0x00d1ac22                __idivs
+                0x00d1ac29                __idivu
+                0x00d1ac31                __idvrms
+                0x00d1ac5f                __idvrmu
+                0x00d1ac63                __idvrmu.hijack_a_iters_ude_dividend
+                0x00d1ac79                __imuls
+                0x00d1ac79                __imulu
+                0x00d1aca9                __ineg
+                0x00d1aca9                __sneg
+                0x00d1acb2                __inot
+                0x00d1acb2                __snot
+                0x00d1acbc                __sshl
+                0x00d1acbc                __ishl
+                0x00d1ace2                __ishru
+                0x00d1ace7                __ishrs
+                0x00d1ad23                __ishrs_1
+                0x00d1ad31                __ishru_1
+                0x00d1ad3f                __ladd
+                0x00d1ad45                __lcmps
+                0x00d1ad52                __lcmpu
+                0x00d1ad5a                __lladd
+                0x00d1ad7e                __lland
+                0x00d1adba                __llcmps
+                0x00d1ade7                __llcmpu
+                0x00d1ae11                __llcmpzero
+                0x00d1ae11                __llequzero
+                0x00d1ae26                __lldivu
+                0x00d1ae3a                __lldvrmu
+                0x00d1ae41                __lldvrmu.hijack
+                0x00d1ae98                __llmulu
+                0x00d1aeed                __llshl
+                0x00d1af07                __llshru
+                0x00d1af37                __llshrs
+                0x00d1af73                __llxor
+                0x00d1afaf                __lmuls
+                0x00d1afaf                __lmulu
+                0x00d1b00b                __lshl
+                0x00d1b018                __lshrs
+                0x00d1b032                __lshru
+                0x00d1b040                __lsub
+                0x00d1b04a                __lor
+                0x00d1b04e                __ior
+                0x00d1b065                __sand
+                0x00d1b06e                __sdivu
+                0x00d1b076                __sdvrmu
+                0x00d1b086                __setflag
+                0x00d1b090                __smuls
+                0x00d1b090                __smulu
+                0x00d1b0a3                __sremu
+                0x00d1b0aa                __sshru
+                0x00d1b0b7                __lxor
+                0x00d1b0bb                __ixor
+                0x00d1b0d2                ___sleep_common.1
+                0x00d1b0d2                ___sleep_common
+                0x00d1b0d3                ___sleep_common.2
+                0x00d1b0d4                ___sleep_common.3
+                0x00d1b0ed                _clock
+                0x00d1b0f8                _memcpy
+                0x00d1b119                _atomic_load_increasing_32
+ .text._engine_reset
+                0x00d1b13e       0x79 obj/CROLLER.o
+                0x00d1b13e                _engine_reset
+ .text._engine_tick
+                0x00d1b1b7      0xa08 obj/CROLLER.o
+                0x00d1b1b7                _engine_tick
+ .text._board_geometry
+                0x00d1bbbf       0x7d obj/CROLLER.o
+ .text._draw_animation_corridor
+                0x00d1bc3c       0x5d obj/CROLLER.o
+ .text._draw_block
+                0x00d1bc99      0x2a6 obj/CROLLER.o
+ .text._draw_ball_at
+                0x00d1bf3f       0xca obj/CROLLER.o
+ .text._cardinal_dir
+                0x00d1c009       0x7b obj/CROLLER.o
+ .text._draw_static_board_cell
+                0x00d1c084      0x112 obj/CROLLER.o
+ .text._draw_game_frame
+                0x00d1c196        0x8 obj/CROLLER.o
+ .text._render_game_frame_offset
+                0x00d1c19e      0x460 obj/CROLLER.o
+ .text._tile_size
+                0x00d1c5fe       0x2e obj/CROLLER.o
+ .text._draw_raw_tile
+                0x00d1c62c      0x82c obj/CROLLER.o
+ .text._draw_cell
+                0x00d1ce58       0xac obj/CROLLER.o
+ .text._draw_filled_ellipse
+                0x00d1cf04      0x143 obj/CROLLER.o
+ .text._main    0x00d1d047     0x1813 obj/CROLLER.o
+                0x00d1d047                _main
+ .text._wait_release
+                0x00d1e85a        0xc obj/CROLLER.o
+ .text._draw_grid_background
+                0x00d1e866       0xa5 obj/CROLLER.o
+ .text._install_level
+                0x00d1e90b      0x396 obj/CROLLER.o
+ .text._play_level
+                0x00d1eca1      0xbed obj/CROLLER.o
+ .text._editor_level_valid
+                0x00d1f88e       0x5f obj/CROLLER.o
+ .text._edit_slot
+                0x00d1f8ed      0x854 obj/CROLLER.o
+ .text._save_editor_data
+                0x00d20141       0x9c obj/CROLLER.o
+ .text._popup_wait
+                0x00d201dd       0xd3 obj/CROLLER.o
+ .text._level_complete_wait
+                0x00d202b0      0x190 obj/CROLLER.o
+ .text._engine_move
+                0x00d20440      0x375 obj/CROLLER.o
+                0x00d20440                _engine_move
+ .text._npf_vpprintf
+                0x00d207b5     0x1775 obj/CROLLER.o
+                0x00d207b5                _npf_vpprintf
+ .text._NPF_PUTC_IMPL
+                0x00d21f2a       0x2d obj/CROLLER.o
+ .text._npf_utoa_rev
+                0x00d21f57       0xe6 obj/CROLLER.o
+ .text._vsnprintf
+                0x00d2203d       0x88 obj/CROLLER.o
+                0x00d2203d                _vsnprintf
+ .text._npf_bufputc
+                0x00d220c5       0x25 obj/CROLLER.o
+ .text._npf_bufputc_nop
+                0x00d220ea        0x7 obj/CROLLER.o
+ .text._sprintf
+                0x00d220f1       0x29 obj/CROLLER.o
+                0x00d220f1                _sprintf
+ .text.__bctlz  0x00d2211a       0x22 obj/CROLLER.o
+                0x00d2211a                __bctlz
+ .text.__sctlz  0x00d2213c        0xc obj/CROLLER.o
+                0x00d2213c                __sctlz
+ .text.__ictlz  0x00d22148       0x12 obj/CROLLER.o
+                0x00d22148                __ictlz
+ .text.__llctlz
+                0x00d2215a        0xe obj/CROLLER.o
+                0x00d2215a                __llctlz
+ .text.__i48ctlz
+                0x00d22168       0x15 obj/CROLLER.o
+                0x00d22168                __i48ctlz
+ .text._delay   0x00d2217d       0x2a obj/CROLLER.o
+                0x00d2217d                _msleep
+                0x00d2217d                _delay
+ *(.gnu.warning)
+
+.rodata         0x00d221a8     0x65ee
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._play_level
+                0x00d221a8        0xc obj/CROLLER.o
+ .rodata._.str  0x00d221b4        0xc obj/CROLLER.o
+ .rodata._level_00_cells
+                0x00d221c0       0xc4 obj/CROLLER.o
+ .rodata._level_00_solution
+                0x00d22284        0x7 obj/CROLLER.o
+ .rodata._.str.1
+                0x00d2228b        0xc obj/CROLLER.o
+ .rodata._level_01_cells
+                0x00d22297       0xc4 obj/CROLLER.o
+ .rodata._level_01_solution
+                0x00d2235b        0x7 obj/CROLLER.o
+ .rodata._.str.2
+                0x00d22362        0xc obj/CROLLER.o
+ .rodata._level_02_cells
+                0x00d2236e       0xc4 obj/CROLLER.o
+ .rodata._level_02_solution
+                0x00d22432        0xd obj/CROLLER.o
+ .rodata._.str.3
+                0x00d2243f        0x8 obj/CROLLER.o
+ .rodata._level_03_cells
+                0x00d22447       0xc4 obj/CROLLER.o
+ .rodata._level_03_solution
+                0x00d2250b        0xf obj/CROLLER.o
+ .rodata._.str.4
+                0x00d2251a        0x8 obj/CROLLER.o
+ .rodata._level_04_cells
+                0x00d22522       0xc4 obj/CROLLER.o
+ .rodata._level_04_solution
+                0x00d225e6        0xe obj/CROLLER.o
+ .rodata._.str.5
+                0x00d225f4        0x8 obj/CROLLER.o
+ .rodata._level_05_cells
+                0x00d225fc       0xc4 obj/CROLLER.o
+ .rodata._level_05_solution
+                0x00d226c0       0x18 obj/CROLLER.o
+ .rodata._.str.6
+                0x00d226d8        0x8 obj/CROLLER.o
+ .rodata._level_06_cells
+                0x00d226e0       0xc4 obj/CROLLER.o
+ .rodata._level_06_solution
+                0x00d227a4       0x17 obj/CROLLER.o
+ .rodata._.str.7
+                0x00d227bb        0x8 obj/CROLLER.o
+ .rodata._level_07_cells
+                0x00d227c3       0xc4 obj/CROLLER.o
+ .rodata._level_07_solution
+                0x00d22887       0x19 obj/CROLLER.o
+ .rodata._.str.8
+                0x00d228a0        0x8 obj/CROLLER.o
+ .rodata._level_08_cells
+                0x00d228a8       0xc4 obj/CROLLER.o
+ .rodata._level_08_solution
+                0x00d2296c       0x17 obj/CROLLER.o
+ .rodata._.str.9
+                0x00d22983        0x9 obj/CROLLER.o
+ .rodata._level_09_cells
+                0x00d2298c       0xc4 obj/CROLLER.o
+ .rodata._level_09_solution
+                0x00d22a50        0xb obj/CROLLER.o
+ .rodata._.str.10
+                0x00d22a5b        0x9 obj/CROLLER.o
+ .rodata._level_10_cells
+                0x00d22a64       0xc4 obj/CROLLER.o
+ .rodata._level_10_solution
+                0x00d22b28       0x10 obj/CROLLER.o
+ .rodata._.str.11
+                0x00d22b38        0x9 obj/CROLLER.o
+ .rodata._level_11_cells
+                0x00d22b41       0xc4 obj/CROLLER.o
+ .rodata._level_11_solution
+                0x00d22c05       0x14 obj/CROLLER.o
+ .rodata._.str.12
+                0x00d22c19        0x9 obj/CROLLER.o
+ .rodata._level_12_cells
+                0x00d22c22       0xc4 obj/CROLLER.o
+ .rodata._level_12_solution
+                0x00d22ce6       0x11 obj/CROLLER.o
+ .rodata._.str.13
+                0x00d22cf7        0x9 obj/CROLLER.o
+ .rodata._level_13_cells
+                0x00d22d00       0xc4 obj/CROLLER.o
+ .rodata._level_13_solution
+                0x00d22dc4       0x3d obj/CROLLER.o
+ .rodata._.str.14
+                0x00d22e01        0x9 obj/CROLLER.o
+ .rodata._level_14_cells
+                0x00d22e0a       0xc4 obj/CROLLER.o
+ .rodata._level_14_solution
+                0x00d22ece        0x8 obj/CROLLER.o
+ .rodata._.str.15
+                0x00d22ed6        0x9 obj/CROLLER.o
+ .rodata._level_15_cells
+                0x00d22edf       0xc4 obj/CROLLER.o
+ .rodata._level_15_solution
+                0x00d22fa3        0xc obj/CROLLER.o
+ .rodata._.str.16
+                0x00d22faf        0x9 obj/CROLLER.o
+ .rodata._level_16_cells
+                0x00d22fb8       0xc4 obj/CROLLER.o
+ .rodata._level_16_solution
+                0x00d2307c       0x10 obj/CROLLER.o
+ .rodata._.str.17
+                0x00d2308c        0x9 obj/CROLLER.o
+ .rodata._level_17_cells
+                0x00d23095       0xc4 obj/CROLLER.o
+ .rodata._level_17_solution
+                0x00d23159       0x19 obj/CROLLER.o
+ .rodata._.str.18
+                0x00d23172        0x9 obj/CROLLER.o
+ .rodata._level_18_cells
+                0x00d2317b       0xc4 obj/CROLLER.o
+ .rodata._level_18_solution
+                0x00d2323f       0x15 obj/CROLLER.o
+ .rodata._.str.19
+                0x00d23254        0x9 obj/CROLLER.o
+ .rodata._level_19_cells
+                0x00d2325d       0xc4 obj/CROLLER.o
+ .rodata._level_19_solution
+                0x00d23321        0xf obj/CROLLER.o
+ .rodata._.str.20
+                0x00d23330        0x9 obj/CROLLER.o
+ .rodata._level_20_cells
+                0x00d23339       0xc4 obj/CROLLER.o
+ .rodata._level_20_solution
+                0x00d233fd       0x17 obj/CROLLER.o
+ .rodata._.str.21
+                0x00d23414        0x9 obj/CROLLER.o
+ .rodata._level_21_cells
+                0x00d2341d       0xc4 obj/CROLLER.o
+ .rodata._level_21_solution
+                0x00d234e1       0x16 obj/CROLLER.o
+ .rodata._.str.22
+                0x00d234f7        0x9 obj/CROLLER.o
+ .rodata._level_22_cells
+                0x00d23500       0xc4 obj/CROLLER.o
+ .rodata._level_22_solution
+                0x00d235c4       0x19 obj/CROLLER.o
+ .rodata._.str.23
+                0x00d235dd        0x9 obj/CROLLER.o
+ .rodata._level_23_cells
+                0x00d235e6       0xc4 obj/CROLLER.o
+ .rodata._level_23_solution
+                0x00d236aa       0x12 obj/CROLLER.o
+ .rodata._.str.24
+                0x00d236bc        0x9 obj/CROLLER.o
+ .rodata._level_24_cells
+                0x00d236c5       0xc4 obj/CROLLER.o
+ .rodata._level_24_solution
+                0x00d23789        0xf obj/CROLLER.o
+ .rodata._.str.25
+                0x00d23798        0x9 obj/CROLLER.o
+ .rodata._level_25_cells
+                0x00d237a1       0xc4 obj/CROLLER.o
+ .rodata._level_25_solution
+                0x00d23865       0x25 obj/CROLLER.o
+ .rodata._.str.26
+                0x00d2388a        0x9 obj/CROLLER.o
+ .rodata._level_26_cells
+                0x00d23893       0xc4 obj/CROLLER.o
+ .rodata._level_26_solution
+                0x00d23957       0x1d obj/CROLLER.o
+ .rodata._.str.27
+                0x00d23974        0x9 obj/CROLLER.o
+ .rodata._level_27_cells
+                0x00d2397d       0xc4 obj/CROLLER.o
+ .rodata._level_27_solution
+                0x00d23a41       0x1b obj/CROLLER.o
+ .rodata._.str.28
+                0x00d23a5c        0x9 obj/CROLLER.o
+ .rodata._level_28_cells
+                0x00d23a65       0xc4 obj/CROLLER.o
+ .rodata._level_28_solution
+                0x00d23b29       0x1a obj/CROLLER.o
+ .rodata._.str.29
+                0x00d23b43        0x9 obj/CROLLER.o
+ .rodata._level_29_cells
+                0x00d23b4c       0xc4 obj/CROLLER.o
+ .rodata._level_29_solution
+                0x00d23c10       0x1d obj/CROLLER.o
+ .rodata._.str.30
+                0x00d23c2d        0x9 obj/CROLLER.o
+ .rodata._level_30_cells
+                0x00d23c36       0xc4 obj/CROLLER.o
+ .rodata._level_30_solution
+                0x00d23cfa        0x7 obj/CROLLER.o
+ .rodata._.str.31
+                0x00d23d01        0x9 obj/CROLLER.o
+ .rodata._level_31_cells
+                0x00d23d0a       0xc4 obj/CROLLER.o
+ .rodata._level_31_solution
+                0x00d23dce       0x11 obj/CROLLER.o
+ .rodata._.str.32
+                0x00d23ddf        0x9 obj/CROLLER.o
+ .rodata._level_32_cells
+                0x00d23de8       0xc4 obj/CROLLER.o
+ .rodata._level_32_solution
+                0x00d23eac       0x1b obj/CROLLER.o
+ .rodata._.str.33
+                0x00d23ec7        0x9 obj/CROLLER.o
+ .rodata._level_33_cells
+                0x00d23ed0       0xc4 obj/CROLLER.o
+ .rodata._level_33_solution
+                0x00d23f94        0xb obj/CROLLER.o
+ .rodata._.str.34
+                0x00d23f9f        0x9 obj/CROLLER.o
+ .rodata._level_34_cells
+                0x00d23fa8       0xc4 obj/CROLLER.o
+ .rodata._level_34_solution
+                0x00d2406c        0xe obj/CROLLER.o
+ .rodata._.str.35
+                0x00d2407a        0x9 obj/CROLLER.o
+ .rodata._level_35_cells
+                0x00d24083       0xc4 obj/CROLLER.o
+ .rodata._level_35_solution
+                0x00d24147       0x16 obj/CROLLER.o
+ .rodata._.str.36
+                0x00d2415d        0x9 obj/CROLLER.o
+ .rodata._level_36_cells
+                0x00d24166       0xc4 obj/CROLLER.o
+ .rodata._level_36_solution
+                0x00d2422a       0x23 obj/CROLLER.o
+ .rodata._.str.37
+                0x00d2424d        0x9 obj/CROLLER.o
+ .rodata._level_37_cells
+                0x00d24256       0xc4 obj/CROLLER.o
+ .rodata._level_37_solution
+                0x00d2431a       0x1a obj/CROLLER.o
+ .rodata._.str.38
+                0x00d24334        0x9 obj/CROLLER.o
+ .rodata._level_38_cells
+                0x00d2433d       0xc4 obj/CROLLER.o
+ .rodata._level_38_solution
+                0x00d24401       0x20 obj/CROLLER.o
+ .rodata._.str.39
+                0x00d24421        0x9 obj/CROLLER.o
+ .rodata._level_39_cells
+                0x00d2442a       0xc4 obj/CROLLER.o
+ .rodata._level_39_solution
+                0x00d244ee       0x16 obj/CROLLER.o
+ .rodata._.str.40
+                0x00d24504        0x9 obj/CROLLER.o
+ .rodata._level_40_cells
+                0x00d2450d       0xc4 obj/CROLLER.o
+ .rodata._.str.41
+                0x00d245d1        0x9 obj/CROLLER.o
+ .rodata._level_41_cells
+                0x00d245da       0xc4 obj/CROLLER.o
+ .rodata._level_41_solution
+                0x00d2469e        0xf obj/CROLLER.o
+ .rodata._.str.42
+                0x00d246ad        0x9 obj/CROLLER.o
+ .rodata._level_42_cells
+                0x00d246b6       0xc4 obj/CROLLER.o
+ .rodata._level_42_solution
+                0x00d2477a       0x11 obj/CROLLER.o
+ .rodata._.str.43
+                0x00d2478b        0x9 obj/CROLLER.o
+ .rodata._level_43_cells
+                0x00d24794       0xc4 obj/CROLLER.o
+ .rodata._level_43_solution
+                0x00d24858        0x7 obj/CROLLER.o
+ .rodata._.str.44
+                0x00d2485f        0x9 obj/CROLLER.o
+ .rodata._level_44_cells
+                0x00d24868       0xc4 obj/CROLLER.o
+ .rodata._level_44_solution
+                0x00d2492c       0x10 obj/CROLLER.o
+ .rodata._.str.45
+                0x00d2493c       0x10 obj/CROLLER.o
+ .rodata._level_45_cells
+                0x00d2494c       0xc4 obj/CROLLER.o
+ .rodata._level_45_solution
+                0x00d24a10        0xe obj/CROLLER.o
+ .rodata._.str.46
+                0x00d24a1e       0x13 obj/CROLLER.o
+ .rodata._level_46_cells
+                0x00d24a31       0xc4 obj/CROLLER.o
+ .rodata._level_46_solution
+                0x00d24af5        0x1 obj/CROLLER.o
+ .rodata._.str.47
+                0x00d24af6        0xd obj/CROLLER.o
+ .rodata._level_47_cells
+                0x00d24b03       0xc4 obj/CROLLER.o
+ .rodata._level_47_solution
+                0x00d24bc7       0x25 obj/CROLLER.o
+ .rodata._.str.48
+                0x00d24bec        0xd obj/CROLLER.o
+ .rodata._level_48_cells
+                0x00d24bf9       0xc4 obj/CROLLER.o
+ .rodata._level_48_solution
+                0x00d24cbd       0x19 obj/CROLLER.o
+ .rodata._palette
+                0x00d24cd6       0x40 obj/CROLLER.o
+ .rodata._ramp_turn_matches.turns
+                0x00d24d16       0x10 obj/CROLLER.o
+ .rodata._.str.49
+                0x00d24d26        0x4 obj/CROLLER.o
+ .rodata._.str.1.50
+                0x00d24d2a        0x8 obj/CROLLER.o
+ .rodata._.str.2.51
+                0x00d24d32        0x6 obj/CROLLER.o
+ .rodata._.str.3.52
+                0x00d24d38        0x7 obj/CROLLER.o
+ .rodata._.str.4.97
+                0x00d24d3f       0x10 obj/CROLLER.o
+ .rodata._.str.5.59
+                0x00d24d4f        0xd obj/CROLLER.o
+ .rodata._.str.6.98
+                0x00d24d5c        0x5 obj/CROLLER.o
+ .rodata.___const.main_menu.items
+                0x00d24d61        0x9 obj/CROLLER.o
+ .rodata._.str.7.54
+                0x00d24d6a       0x10 obj/CROLLER.o
+ .rodata._cyber_logo
+                0x00d24d7a     0x336a obj/CROLLER.o
+                0x00d24d7a                _cyber_logo
+ .rodata._.str.8.53
+                0x00d280e4       0x1c obj/CROLLER.o
+ .rodata._.str.9.55
+                0x00d28100        0x7 obj/CROLLER.o
+ *fill*         0x00d28107        0x1 
+ .rodata._builtin_levels
+                0x00d28108      0x2ae obj/CROLLER.o
+                0x00d28108                _builtin_levels
+ .rodata._bayer4
+                0x00d283b6       0x10 obj/CROLLER.o
+ .rodata._fade_line_order
+                0x00d283c6       0x10 obj/CROLLER.o
+ .rodata._.str.10.95
+                0x00d283d6        0xf obj/CROLLER.o
+ .rodata._.str.11.96
+                0x00d283e5        0x5 obj/CROLLER.o
+ .rodata._.str.12.92
+                0x00d283ea       0x14 obj/CROLLER.o
+ .rodata._.str.13.93
+                0x00d283fe        0xb obj/CROLLER.o
+ .rodata._.str.14.94
+                0x00d28409        0x6 obj/CROLLER.o
+ .rodata._editor_menu.actions
+                0x00d2840f        0x9 obj/CROLLER.o
+ .rodata._.str.15.89
+                0x00d28418        0x5 obj/CROLLER.o
+ .rodata._.str.16.90
+                0x00d2841d        0x5 obj/CROLLER.o
+ .rodata._.str.17.91
+                0x00d28422        0x7 obj/CROLLER.o
+ .rodata._.str.18.60
+                0x00d28429        0x8 obj/CROLLER.o
+ .rodata._.str.19.61
+                0x00d28431        0xb obj/CROLLER.o
+ .rodata._.str.20.62
+                0x00d2843c        0xf obj/CROLLER.o
+ .rodata._.str.21.63
+                0x00d2844b       0x20 obj/CROLLER.o
+ .rodata._.str.22.64
+                0x00d2846b       0x1e obj/CROLLER.o
+ .rodata._.str.23.65
+                0x00d28489        0xe obj/CROLLER.o
+ .rodata._.str.24.66
+                0x00d28497        0xf obj/CROLLER.o
+ .rodata._.str.25.67
+                0x00d284a6        0xd obj/CROLLER.o
+ .rodata._.str.26.68
+                0x00d284b3       0x14 obj/CROLLER.o
+ .rodata._.str.27.56
+                0x00d284c7        0x9 obj/CROLLER.o
+ .rodata._.str.28.57
+                0x00d284d0        0x2 obj/CROLLER.o
+ .rodata._.str.29.58
+                0x00d284d2        0x5 obj/CROLLER.o
+ .rodata._.str.30.81
+                0x00d284d7        0xb obj/CROLLER.o
+ .rodata._.str.31.82
+                0x00d284e2       0x14 obj/CROLLER.o
+ .rodata._.str.32.83
+                0x00d284f6        0xc obj/CROLLER.o
+ .rodata._.str.33.84
+                0x00d28502        0x7 obj/CROLLER.o
+ .rodata._.str.34.85
+                0x00d28509        0xc obj/CROLLER.o
+ .rodata._.str.35.69
+                0x00d28515        0x7 obj/CROLLER.o
+ .rodata._.str.36.70
+                0x00d2851c        0x5 obj/CROLLER.o
+ .rodata._tile_names
+                0x00d28521       0x42 obj/CROLLER.o
+ .rodata._.str.37.71
+                0x00d28563        0x7 obj/CROLLER.o
+ .rodata._.str.38.72
+                0x00d2856a        0x7 obj/CROLLER.o
+ .rodata._.str.39.73
+                0x00d28571        0xa obj/CROLLER.o
+ .rodata._.str.40.74
+                0x00d2857b        0x9 obj/CROLLER.o
+ .rodata._.str.41.75
+                0x00d28584        0x6 obj/CROLLER.o
+ .rodata._.str.42.76
+                0x00d2858a        0x6 obj/CROLLER.o
+ .rodata._.str.43.77
+                0x00d28590        0x5 obj/CROLLER.o
+ .rodata._.str.44.78
+                0x00d28595        0x5 obj/CROLLER.o
+ .rodata._.str.45.79
+                0x00d2859a        0x6 obj/CROLLER.o
+ .rodata._.str.46.80
+                0x00d285a0        0x7 obj/CROLLER.o
+ .rodata._.str.47.86
+                0x00d285a7        0x1 obj/CROLLER.o
+ .rodata._.str.48.87
+                0x00d285a8        0x6 obj/CROLLER.o
+ .rodata._.str.49.88
+                0x00d285ae        0x5 obj/CROLLER.o
+ .rodata._.str.50
+                0x00d285b3        0x5 obj/CROLLER.o
+ .rodata._.str.51
+                0x00d285b8        0x5 obj/CROLLER.o
+ .rodata._.str.52
+                0x00d285bd        0x7 obj/CROLLER.o
+ .rodata._.str.53
+                0x00d285c4        0x7 obj/CROLLER.o
+ .rodata._.str.54
+                0x00d285cb        0x7 obj/CROLLER.o
+ .rodata._.str.55
+                0x00d285d2        0x7 obj/CROLLER.o
+ .rodata._.str.56
+                0x00d285d9        0x7 obj/CROLLER.o
+ .rodata._.str.57
+                0x00d285e0        0xa obj/CROLLER.o
+ .rodata._.str.58
+                0x00d285ea        0xa obj/CROLLER.o
+ .rodata._.str.59
+                0x00d285f4        0x5 obj/CROLLER.o
+ .rodata._.str.60
+                0x00d285f9        0xb obj/CROLLER.o
+ .rodata._.str.61
+                0x00d28604        0xb obj/CROLLER.o
+ .rodata._.str.62
+                0x00d2860f        0x6 obj/CROLLER.o
+ .rodata._.str.63
+                0x00d28615        0x8 obj/CROLLER.o
+ .rodata._.str.64
+                0x00d2861d        0x8 obj/CROLLER.o
+ .rodata._.str.65
+                0x00d28625        0x8 obj/CROLLER.o
+ .rodata._.str.66
+                0x00d2862d        0x8 obj/CROLLER.o
+ .rodata._.str.67
+                0x00d28635        0x8 obj/CROLLER.o
+ .rodata._.str.68
+                0x00d2863d        0x7 obj/CROLLER.o
+ .rodata._.str.69
+                0x00d28644        0xa obj/CROLLER.o
+ .rodata._.str.70
+                0x00d2864e        0x2 obj/CROLLER.o
+ .rodata._switch.table.main
+                0x00d28650        0x6 obj/CROLLER.o
+ .rodata._switch.table.draw_raw_tile
+                0x00d28656        0xc obj/CROLLER.o
+ .rodata.engine_tables
+                0x00d28662       0x10 obj/CROLLER.o
+ .rodata._npf_vpprintf
+                0x00d28672      0x102 obj/CROLLER.o
+ .rodata.libload
+                0x00d28774       0x22 obj/crt0.o
+
+.init_array     0x00d28796        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(.preinit_array)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x00d28796        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x00d28796                        ___data_low = .
+
+.data           0x00d28796        0x0
+ *(.data .data.* .gnu.linkonce.d.*)
+ *(.data1)
+                0x00d28796                        ___runprgm_reloc_start = .
+ *(.runprgm.reloc)
+                0x00d28796                        ___runprgm_reloc_end = .
+                0x00d28796                        ___data_high = .
+                0x00000000                        ___data_len = (___data_high - ___data_low)
+                0x00d052c6                        . = BSSHEAP_LOW
+                0x00d052c6                        ___bss_low = .
+
+.bss            0x00d052c6     0x13cf
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._level_w  0x00d052c6        0x1 obj/CROLLER.o
+                0x00d052c6                _level_w
+ .bss._level_h  0x00d052c7        0x1 obj/CROLLER.o
+                0x00d052c7                _level_h
+ .bss._grid     0x00d052c8      0x190 obj/CROLLER.o
+                0x00d052c8                _grid
+ .bss._base_grid
+                0x00d05458      0x190 obj/CROLLER.o
+                0x00d05458                _base_grid
+ .bss._blocks   0x00d055e8      0x190 obj/CROLLER.o
+                0x00d055e8                _blocks
+ .bss._base_blocks
+                0x00d05778      0x190 obj/CROLLER.o
+                0x00d05778                _base_blocks
+ .bss._start_r  0x00d05908        0x1 obj/CROLLER.o
+                0x00d05908                _start_r
+ .bss._player_r
+                0x00d05909        0x1 obj/CROLLER.o
+                0x00d05909                _player_r
+ .bss._start_c  0x00d0590a        0x1 obj/CROLLER.o
+                0x00d0590a                _start_c
+ .bss._player_c
+                0x00d0590b        0x1 obj/CROLLER.o
+                0x00d0590b                _player_c
+ .bss._coin_count
+                0x00d0590c        0x1 obj/CROLLER.o
+                0x00d0590c                _coin_count
+ .bss._render_r
+                0x00d0590d        0x1 obj/CROLLER.o
+ .bss._render_c
+                0x00d0590e        0x1 obj/CROLLER.o
+ .bss._render_pos_valid
+                0x00d0590f        0x1 obj/CROLLER.o
+ .bss._anim_block_active
+                0x00d05910        0x1 obj/CROLLER.o
+                0x00d05910                _anim_block_active
+ .bss._in_game  0x00d05911        0x1 obj/CROLLER.o
+ .bss._tele_r   0x00d05912      0x190 obj/CROLLER.o
+                0x00d05912                _tele_r
+ .bss._tele_c   0x00d05aa2      0x190 obj/CROLLER.o
+                0x00d05aa2                _tele_c
+ .bss._anim_block_type
+                0x00d05c32        0x1 obj/CROLLER.o
+                0x00d05c32                _anim_block_type
+ .bss._anim_block_from_r
+                0x00d05c33        0x1 obj/CROLLER.o
+                0x00d05c33                _anim_block_from_r
+ .bss._anim_block_from_c
+                0x00d05c34        0x1 obj/CROLLER.o
+                0x00d05c34                _anim_block_from_c
+ .bss._anim_block_to_r
+                0x00d05c35        0x1 obj/CROLLER.o
+                0x00d05c35                _anim_block_to_r
+ .bss._anim_block_to_c
+                0x00d05c36        0x1 obj/CROLLER.o
+                0x00d05c36                _anim_block_to_c
+ .bss._active_name
+                0x00d05c37       0x29 obj/CROLLER.o
+ .bss._solution_len
+                0x00d05c60        0x2 obj/CROLLER.o
+ .bss._choose_builtin.sel
+                0x00d05c62        0x1 obj/CROLLER.o
+ .bss._choose_builtin.view_start
+                0x00d05c63        0x1 obj/CROLLER.o
+ .bss._solution
+                0x00d05c64      0x400 obj/CROLLER.o
+ .bss._editor_valid_mask
+                0x00d06064        0x1 obj/CROLLER.o
+ .bss._editor_cells
+                0x00d06065      0x620 obj/CROLLER.o
+ .bss.engine_state
+                0x00d06685        0x7 obj/CROLLER.o
+ .bss._pc_cnt.0
+                0x00d0668c        0x3 obj/CROLLER.o
+ .bss._pc_cnt.1
+                0x00d0668f        0x3 obj/CROLLER.o
+ .bss._pc_cnt.2
+                0x00d06692        0x3 obj/CROLLER.o
+ *(COMMON)
+                0x00d06695                        ___bss_high = .
+                0x000013cf                        ___bss_len = (___bss_high - ___bss_low)
+                0x00000001                        ASSERT ((. <= BSSHEAP_HIGH), Error: BSS exceed BSSHEAP_HIGH limit)
+                0x00d06695                        ___heap_low = .
+                0x00d13fd8                        . = BSSHEAP_HIGH
+                0x00d13fd8                        ___heap_high = .
+
+.runprgm
+ *(.runprgm.reloc)
+
+.debug_info
+ *(.debug_info .debug_info.*)
+
+.debug_abbrev
+ *(.debug_abbrev .debug_abbrev.*)
+
+.debug_line
+ *(.debug_line .debug_line.*)
+
+.debug_line_str
+ *(.debug_line_str .debug_line_str.*)
+
+.debug_str
+ *(.debug_str .debug_str.*)
+
+.debug_str_offsets
+ *(.debug_str_offsets .debug_str_offsets.*)
+
+.debug_addr
+ *(.debug_addr .debug_addr.*)
+
+.debug_aranges
+ *(.debug_aranges .debug_aranges.*)
+
+.debug_ranges
+ *(.debug_ranges .debug_ranges.*)
+
+.debug_rnglists
+ *(.debug_rnglists .debug_rnglists.*)
+
+.debug_loc
+ *(.debug_loc .debug_loc.*)
+
+.debug_loclists
+ *(.debug_loclists .debug_loclists.*)
+
+.debug_frame
+ *(.debug_frame .debug_frame.*)
+
+.debug_macro
+ *(.debug_macro .debug_macro.*)
+
+.debug_macinfo
+ *(.debug_macinfo .debug_macinfo.*)
+
+.debug_names
+ *(.debug_names .debug_names.*)
+
+.debug_pubnames
+ *(.debug_pubnames .debug_pubnames.*)
+
+.debug_pubtypes
+ *(.debug_pubtypes .debug_pubtypes.*)
+
+.debug_types
+ *(.debug_types .debug_types.*)
+
+.debug_sup
+ *(.debug_sup .debug_sup.*)
+
+.debug_cu_index
+ *(.debug_cu_index .debug_cu_index.*)
+
+.debug_tu_index
+ *(.debug_tu_index .debug_tu_index.*)
+
+.gdb_index
+ *(.gdb_index)
+
+.debug_gdb_scripts
+ *(.debug_gdb_scripts)
+
+.debug_abbrev.dwo
+ *(.debug_abbrev.dwo .debug_abbrev.dwo.*)
+
+.debug_info.dwo
+ *(.debug_info.dwo .debug_info.dwo.*)
+
+.debug_line.dwo
+ *(.debug_line.dwo .debug_line.dwo.*)
+
+.debug_loclists.dwo
+ *(.debug_loclists.dwo .debug_loclists.dwo.*)
+
+.debug_macro.dwo
+ *(.debug_macro.dwo .debug_macro.dwo.*)
+
+.debug_rnglists.dwo
+ *(.debug_rnglists.dwo .debug_rnglists.dwo.*)
+
+.debug_str.dwo
+ *(.debug_str.dwo .debug_str.dwo.*)
+
+.debug_str_offsets.dwo
+ *(.debug_str_offsets.dwo .debug_str_offsets.dwo.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+                [!provide]                        PROVIDE (___runprgm_reloc_len = (___runprgm_reloc_end - ___runprgm_reloc_start))
+LOAD obj/CROLLER.o
+LOAD obj/crt0.o
+START GROUP
+LOAD /home/codespace/CEdev/lib/libc/allocator_standard.a
+LOAD /home/codespace/CEdev/lib/crt/libcrt.a
+LOAD /home/codespace/CEdev/lib/ce/libce.a
+LOAD /home/codespace/CEdev/lib/softfloat/libsoftfloat.a
+LOAD /home/codespace/CEdev/lib/libc/libc_os.a
+LOAD /home/codespace/CEdev/lib/libcxx/libcxx.a
+END GROUP
+OUTPUT(bin/CROLLER.obj elf32-z80)

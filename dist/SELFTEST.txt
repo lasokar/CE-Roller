@@ -1,0 +1,15 @@
+PASS: 49/49 built-in levels solved and replay-verified
+PASS: built-in solution bytes = 970 (max 61)
+PASS: generated C contains 49 cell arrays + 49 solution arrays
+PASS: external CRLVL import system removed
+PASS: in-game editor configured for 8 x 14x14 slots in CREDITOR
+PASS: wrapped names, hidden no-solver UI, and PLAY/EDIT/DELETE slot actions present
+PASS: web-style tile renderers + linear continuous 96 ms / 12-frame movement handoff present
+PASS: ramps use orientation-checked smoothstep quadratic Bezier interpolation through the ramp cell
+PASS: solver popup redraws the active level into each back buffer before swapping
+PASS: empty editor slots are single-action rows; left/right disabled until saved
+PASS: level menu sliding window reaches the partial final row from every column
+PASS: death effect fades ball, grid to black, resets, and fades grid back in
+PASS: favicon conversion flattens transparency onto opaque pure black
+PASS: web-styled completion popup returns to level menu; preview cells are solid
+PASS: assembly branch/call targets resolved; IX not touched
